@@ -6,8 +6,20 @@ Returns promises instead of using callbacks.
 Install the module with: `npm install pgpromise`
 
 ```javascript
-var pgpromise = require('pgpromise');
-pgpromise.awesome(); // "awesome"
+var pg = require('pg');
+var PgPromise = require('pgpromise');
+
+// use connection string or connection config object
+var conString = "postgres://postgres:1234@localhost/postgres";
+var db = new PgPromise(pg, conString);
+
+// make promised queries.
+db.connect().then(function(conn) {
+  conn.client.queryP('SELECT * from table').then(function(result) {
+    console.log(result.rows);
+  });
+});
+
 ```
 
 ## Documentation
