@@ -19,7 +19,8 @@
       "type": "MIT"
     }
   ],
-  "keywords":[
+  "keywords": [
+    "pgpromise",
     "promises",
     "postgres",
     "pg",
@@ -35,5 +36,8 @@
   },
   "scripts": {
     "test": "grunt"
+  },
+  "dependencies": {
+    "q": "~1.0.0"
   }
 }
