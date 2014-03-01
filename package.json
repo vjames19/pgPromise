@@ -1,6 +1,6 @@
 {
   "name": "pgpromise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/pgpromise.js",
   "description": "Returns promises instead of using callbacks.",
   "homepage": "https://github.com/vjames19/pgPromise",
