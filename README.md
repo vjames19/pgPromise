@@ -17,7 +17,7 @@ var db = new PgPromise(pg, conString);
 db.connect().then(function(conn) {
   conn.client.queryP('SELECT * from table').then(function(result) {
     console.log(result.rows);
-  });
+  }).fin(conn.done); // returns the client to the pool.
 });
 
 ```
